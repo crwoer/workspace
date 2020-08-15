@@ -12,9 +12,11 @@ public class Works {
         int y = 200;
         add(x,y);
         sub(x,y);
-//        mul(x,y);
-//        div(x,y);
-//        remain(x,y);
+        mul(x,y);
+        div(x,y);
+        remain(x,y);
+
+        test8();
     }
 
     //  第一题
@@ -28,7 +30,7 @@ public class Works {
          * 6. 使用输出语句输出面积和周长
          * */
         int l = 20;
-        int w = 10;
+        int w = 6;
         int area = l * w;
         int perimeter = (l + w) * 2;
         System.out.println("长方形的面积为：" + area + ",周长为：" + perimeter);
@@ -69,11 +71,11 @@ public class Works {
         */
 
         int i1 = 100;
-        long l1 = 200;
+        long l1 = 200L;
         long add = i1 + l1;
         System.out.println("add 的值：" + add);
         long l2 = 1000000;
-        float f2 = (float) 0.44;
+        float f2 = (float) 0.44F;
         float add2 = l2 + f2;
         System.out.println("add2的值：" + add2);
         int i3 = 1000000;
@@ -95,8 +97,8 @@ public class Works {
         boolean isa2 = a2 % 2 == 0;
         int b1 = 12;
         int b2 = 13;
-        boolean isb1 = b1 % 2 != 0;
-        boolean isb2 = b2 % 2 != 0;
+        boolean isb1 = b1 % 2 == 1;
+        boolean isb2 = b2 % 2 == 1;
         System.out.println("10是偶数？" + isa1);
         System.out.println("11是偶数？" + isa2);
         System.out.println("12是奇数？" + isb1);
@@ -115,9 +117,9 @@ public class Works {
 //        7. printNum方法中,定义float 变量 var2 , 保存var1 与1024的和.
 //        8. printNum方法中,同时输出var1,var2的值.
 
-        float f1 = (float) 12345.01;
-        float f2 = (float) 12345.00;
-        float var1 = f1 > f2 ? (float) 12456 : (float) 12456.02;
+        float f1 = 12345.01F;
+        float f2 = 12345.00F;
+        float var1 = f1 > f2 ? 12456 : 12456.02F;
         float var2 = var1 + 1024;
         System.out.println("var1的值为：" + var1 + " " + "var2的值为：" + var2);
     }
@@ -144,6 +146,29 @@ public class Works {
         System.out.println("x，y的和为："+ addnum);
     }
     public static void sub(int x,int y){
+//        求差
+        int subnum = x - y ;
+        System.out.println("x，y的差为：" + subnum);
+    }
+    public static void mul(int x,int y){
+//      求积
+        int mulnum = x * y;
+        System.out.println("x，y的积为：" + mulnum );
+    }
+    public static void div(int x,int y){
+//        求商
+        int divnum = x/y;
+        System.out.println("x，y的商为：" + divnum);
+    }
+    public static void remain(int x, int y){
+//        求余
+        int remainnum = x%y;
+        System.out.println("x，y的余为：" + remainnum);
+    }
+//    第七题 end
+
+//    第八题
+    public static void test8(){
 
     }
 }
