@@ -10,11 +10,11 @@ public class Works {
         printString();
         int x = 100;
         int y = 200;
-        add(x,y);
-        sub(x,y);
-        mul(x,y);
-        div(x,y);
-        remain(x,y);
+        add(x, y);
+        sub(x, y);
+        mul(x, y);
+        div(x, y);
+        remain(x, y);
 
         test8();
     }
@@ -139,36 +139,41 @@ public class Works {
         System.out.println("num：" + num + "是" + str);
     }
 
-//    第七题
-    public static void add(int x,int y){
+    //    第七题
+    public static void add(int x, int y) {
 //        求和
         int addnum = x + y;
-        System.out.println("x，y的和为："+ addnum);
+        System.out.println("x，y的和为：" + addnum);
     }
-    public static void sub(int x,int y){
+
+    public static void sub(int x, int y) {
 //        求差
-        int subnum = x - y ;
+        int subnum = x - y;
         System.out.println("x，y的差为：" + subnum);
     }
-    public static void mul(int x,int y){
+
+    public static void mul(int x, int y) {
 //      求积
         int mulnum = x * y;
-        System.out.println("x，y的积为：" + mulnum );
+        System.out.println("x，y的积为：" + mulnum);
     }
-    public static void div(int x,int y){
+
+    public static void div(int x, int y) {
 //        求商
-        int divnum = x/y;
+        int divnum = x / y;
         System.out.println("x，y的商为：" + divnum);
     }
-    public static void remain(int x, int y){
+
+    public static void remain(int x, int y) {
 //        求余
-        int remainnum = x%y;
+        int remainnum = x % y;
         System.out.println("x，y的余为：" + remainnum);
     }
 //    第七题 end
 
-//    第八题
-    public static void test8(){
+    //    第八题
+    public static void test8() {
+        // 1. 定义char类型变量ch,赋值为'J'
 
     }
 }
