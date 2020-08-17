@@ -5,106 +5,121 @@
     <title>第二天JavaScript作业</title>
 </head>
 <body>
-    <!--1.判断时间阶段-->
-    <!--
-        6-12 上午好
-        13-18 下午好
-        19-23 晚上好
-        0-5 这是休息时间，不要说话
-    -->
-    <h4>1.判断时间阶段</h4>
-    <button type="button" onclick="fun_1()">判断时间阶段</button>
+<!--1.判断时间阶段-->
+<!--
+    6-12 上午好
+    13-18 下午好
+    19-23 晚上好
+    0-5 这是休息时间，不要说话
+-->
+<h4>1.判断时间阶段</h4>
+<button type="button" onclick="fun_1()">判断时间阶段</button>
 
 
-    <!--2.比较两个数的最大值-->
-    <!--
-        连续输入两个数值，判断其最大值
-    -->
-    <h4>2.比较两个数的最大值</h4>
-    <button type="button" onclick="fun_2()">最大值</button>
+<!--2.比较两个数的最大值-->
+<!--
+    连续输入两个数值，判断其最大值
+-->
+<h4>2.比较两个数的最大值</h4>
+<button type="button" onclick="fun_2()">最大值</button>
 
 
-    <!--3.判断奇偶性-->
-    <h4>3.判断奇偶性</h4>
-    <button type="button" onclick="fun_3()">判断奇偶</button>
+<!--3.判断奇偶性-->
+<h4>3.判断奇偶性</h4>
+<button type="button" onclick="fun_3()">判断奇偶</button>
 
 
-    <!--4.判断星期-->
-    <h4>4.判断星期</h4>
-    <button type="button" onclick="fun_4()">判断星期</button>
+<!--4.判断星期-->
+<h4>4.判断星期</h4>
+<button type="button" onclick="fun_4()">判断星期</button>
 
 
-    <!--5.请客吃饭-->
-    <!--
-        大于等于2000，西餐
-        大于等于1500 小于2000，快餐
-        大于等于1000 小于1500，饮料
-        大于等于500 小于1000，棒棒糖
-    `   小于500 下次把钱带够
-    -->
-    <h4>5.请客吃饭</h4>
-    <button type="button" onclick="fun_5()">请客吃饭</button>
+<!--5.请客吃饭-->
+<!--
+    大于等于2000，西餐
+    大于等于1500 小于2000，快餐
+    大于等于1000 小于1500，饮料
+    大于等于500 小于1000，棒棒糖
+`   小于500 下次把钱带够
+-->
+<h4>5.请客吃饭</h4>
+<button type="button" onclick="fun_5()">请客吃饭</button>
 
 
-    <!--6.成绩表-->
+<!--6.成绩表-->
+<!--
+    >= 90 打印A
+    >= 80  < 90 打印B
+    >= 70  < 80 打印C
+    >= 60 < 70 打印D
+    < 60 打印E
+
+-->
+<h4>6.成绩表</h4>
+<button type="button" onclick="fun_6()">判断成绩等级</button>
+
+
+<!--7.三个数的最大值-->
+<h4>7.求三个数的最大值</h4>
+<button type="button" onclick="fun_7()">求最大值</button>
 </body>
 <script type="text/javascript">
-    function fun_1(){
+    function fun_1() {
         var person = prompt("请问现在几点了？");
-        if(person != null && person != ""){
+        if (person != null && person != "") {
             // 6-12 上午好
-            if(person >= 6 && person <= 12){
+            if (person >= 6 && person <= 12) {
                 alert("上午好");
             }
             // 13-18 下午好
-            if(person >= 13 && person <= 18){
+            if (person >= 13 && person <= 18) {
                 alert("下午好");
             }
             // 19-23 晚上好
-            if(person >= 19 && person <= 23){
+            if (person >= 19 && person <= 23) {
                 alert("晚上好");
             }
             // 0-5 这是休息时间，不要说话!
-            if(person >= 0 && person <= 5){
+            if (person >= 0 && person <= 5) {
                 alert("这是休息时间，不要说话!");
             }
         }
     }
 
-    function fun_2(){
+    function fun_2() {
         var num_1 = prompt("请输入一个数：");
-        var num_2 =null;
-        if(num_1 != null && num_1 != ""){
+        var num_2 = null;
+        if (num_1 != null && num_1 != "") {
             num_2 = prompt("请输入一个数：");
-            if(num_2 != null && num_2 != ""){
-                if(num_1 == num_2){
+            if (num_2 != null && num_2 != "") {
+                if (num_1 == num_2) {
                     alert("两数相等都为：" + num_1);
-                }else if(num_1 < num_2){
+                } else if (num_1 < num_2) {
                     alert("最大值为：" + num_2);
-                }else{
+                } else {
                     alert("最大值为：" + num_1);
                 }
-            }else{
+            } else {
                 alert("最大值为：" + num_1);
             }
         }
     }
 
-    function fun_3(){
+    function fun_3() {
         var isParity = prompt("请输入一个数：");
-        if(isParity != null && isParity != ""){
-            if(isParity%2 == 0){
+        if (isParity != null && isParity != "") {
+            if (isParity % 2 == 0) {
                 alert("这个数为：偶数");
-            }else{
+            } else {
                 alert("这个数为：奇数");
             }
         }
     }
 
-    function fun_4(){
+    function fun_4() {
         var dayNum = prompt("请输入日期数：");
-        if(dayNum != null && dayNum != ""){
-            var isWeek = dayNum%7 ;
+        if (dayNum != null && dayNum != "") {
+            var isWeek = dayNum % 7;
             console.log(isWeek);
             switch (isWeek) {
                 case 0:
@@ -132,19 +147,66 @@
         }
     }
 
-    function fun_5(){
+    function fun_5() {
         var money = prompt("班长带了多少钱？");
-        if(money != null && money != ""){
-            if(money >= 2000){
+        if (money != null && money != "") {
+            if (money >= 2000) {
                 alert("请大家吃西餐");
-            }else if(money < 2000 && money >= 1500){
+            } else if (money < 2000 && money >= 1500) {
                 alert("请大家吃快餐");
-            }else if(money < 1500 && money >= 1000){
+            } else if (money < 1500 && money >= 1000) {
                 alert("请大家喝饮料");
-            }else if(money < 1000 && money >= 500){
+            } else if (money < 1000 && money >= 500) {
                 alert("请大家吃棒棒糖");
-            }else{
+            } else {
                 alert("班长下次记得把钱带够");
+            }
+        }
+    }
+
+    function fun_6() {
+        var score = prompt("考试得分：");
+        if (score != null && score != "") {
+            if (score >= 90) {
+                console.log("A");
+            } else if (score >= 80 && score < 90) {
+                console.log("B");
+            } else if (score >= 70 && score < 80) {
+                console.log("C");
+            } else if (score >= 60 && score < 70) {
+                console.log("D");
+            } else {
+                console.log("E");
+            }
+        }
+    }
+
+    function fun_7(){
+        var numMax = 0;
+        var num_1 = prompt("请随机输入第一个数：");
+        if(num_1 != null && num_1 != ""){
+            var num_2  = prompt("请随机输入第二个数：");
+            if(num_2 != null && num_2 != ""){
+                if(num_2 > num_1 || num_1 == num_2){
+                    numMax = num_2;
+                }else{
+                    numMax = num_1;
+                }
+            }else{
+                numMax = num_1;
+            }
+
+            var num_3  = prompt("请随机输入第三个数：");
+            if(num_3 != null && num_3 != ""){
+                if(numMax > num_3 || numMax == num_3){
+                    numMax = numMax;
+                }else{
+                    numMax = num_3;
+                }
+                alert("最大值为：" + numMax);
+            }else{
+                numMax = numMax;
+                alert("最大值为：" + numMax);
             }
         }
     }
