@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+            1.内嵌式：
+                写在网页内部 使用style标签包裹 只能作用与当前网页
+        */
+        p{
+            color: pink;
+        }
+    </style>
+    <!--
+        3.外链式：
+            作用域所有引用的网页
+            新建,css后缀文件
+            使用link标签引入外部css文件
+    -->
+    <link rel="stylesheet" href="../css/test.css">
+</head>
+<body>
+<!--
+    2.行内式
+        写在标签内部 style="样式名：样式值;"
+        只能作用于当前标签
+-->
+<p>内嵌式</p>
+<p style="color: red;">行内式</p>
+<h4>外链式</h4>
+</body>
+</html>

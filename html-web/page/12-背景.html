@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        background-image: url("../img/car.png");
+        /*背景是否平铺  no-repeat不平铺    repeat-x x轴平铺   repeat-y   y轴平铺*/
+        background-repeat: repeat-x;
+        /*背景图片的位置
+            方位表示法   top bottom center left right
+                一个值的时候另外一个值默认是居中的
+            数值表示法   x y
+                一个值的时候y轴是居中的
+        */
+        /*background-position: left bottom;*/
+        background-position: 10px 20px;
+
+        background: pink url("../img/car.png") no-repeat 10px;
+    }
+</style>
+<body>
+    <div></div>
+</body>
+</html>

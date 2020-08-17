@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    /*
+    基础选择器
+        标签选择器  标签名{样式} 选中页面中所有对应的标签
+        类名选择器   .类名{样式} 根据类名选中对应的标签
+            一个类名可以作用于多个标签
+            一个标签可以有多格类名
+        id选择器  #id名{样式}  根据id选中对应的标签  id是唯一的
+        通配符选择器   *{样式}     选中页面中的所有标签
+    符合选择器    是由多个基础选择组合而成
+        交集选择器  选择器1选择器2    会选中同时符合选择器1和选择器2的标签
+        并集选择器  选择器1,选择器2,.....     样式同时作用于选择器1和选择器2
+        后代选择器  祖先选择器 后代选择器     选中祖先选择器下的指定后代选择器
+        子代选择器  父选择器>子选择器         选中选择器下指定子选择器    只能选中亲儿子
+
+    */
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    p{
+        color: pink;
+    }
+    .p1{
+        font-size: 20px;
+    }
+    .fw{
+        font-weight: 700;
+    }
+    #p0{
+
+    }
+    li.li1 {
+        color: red;
+    }
+
+    li, div {
+        font-style: italic;
+    }
+    /*ul span,ul li{*/
+        /*color: skyblue;*/
+    /*}*/
+    li>span{
+        font-size: 20px;
+    }
+</style>
+<body>
+
+<div>盒子标签</div>
+
+<ul>
+    <li>
+        <span>11</span>
+    </li>
+    <li class="li1">22</li>
+    <li>33</li>
+</ul>
+
+<p id="p0">id选择器</p>
+<p class="p1 fw">类名选择器</p>
+<p class="fw">类名选择器</p>
+<p>标签选择器</p>
+</body>
+</html>
