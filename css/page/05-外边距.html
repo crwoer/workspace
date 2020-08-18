@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin</title>
+</head>
+<style>
+    .div1{
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        /*display: inline-block;*/
+        /*margin: 0 auto;*/
+        /*
+        外边距居中必须满足两个条件：
+            1.必须是块级元素
+            2.必须要有宽度
+        外边距的合并
+            嵌套关系/并列关系   都是选中较大的
+        */
+        margin-bottom: 50px;
+    }
+    .som{
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        margin-top: 30px;
+    }
+    /*.div2{*/
+        /*width: 200px;*/
+        /*height: 200px;*/
+        /*background-color: orange;*/
+        /*margin-top: 30px;*/
+    /*}*/
+    ul>li{
+        list-style: none;
+        border-bottom: 1px solid black;
+        line-height: 26px;
+    }
+</style>
+<body>
+<ul>
+    <li>行高=高就是垂直居中</li>
+    <li>行高=高就是垂直居中</li>
+    <li>行高=高就是垂直居中</li>
+</ul>
+<div class="div1"><div class="som"></div></div>
+<!--<div class="div2"></div>-->
+</body>
+</html>

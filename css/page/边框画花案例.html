@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>画花</title>
+</head>
+<style>
+    .box1, .box2{
+        width: 220px;
+        height: 110px;
+        border: 1px dashed skyblue;
+    }
+    .box1 div,.box2 div{
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        display: inline-block;
+    }
+    .item1{
+        border-radius: 0 80%;
+    }
+    .item2{
+        border-radius: 80% 0;
+    }
+</style>
+<body>
+<div class="box1">
+    <div class="item1"></div>
+    <div class="item2"></div>
+</div>
+<div class="box2">
+    <div class="item2"></div>
+    <div class="item1"></div>
+</div>
+</body>
+</html>

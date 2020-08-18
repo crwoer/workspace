@@ -117,16 +117,51 @@
         }
     }
 
-
+    //  2.2 反转数组
     fun_7();
 
     function fun_7() {
+        var arr = [10, 20, 30, 40, 50];
+        //方法1
+        var arrEnd = arr.reverse();
+        console.log("初始数组：" + arr + "反转后的数组：" + arrEnd);
+        //  方法2
+        //     for(var i = 0; i< arr.length; i++){
+        //
+        //     }
     }
 
-
+    //  2.3 数组去重
     fun_8();
 
     function fun_8() {
+        var currArr = [10, 20, 10, 30, 40, 50, 30];
+        //    方法1
+        var arr = [];
+        for (var i = 0; i < currArr.length; i++) {
+            for (var j = i + 1; j < currArr.length; j++) {
+                if (currArr[i] == currArr[j]) {
+                    currArr.splice(j, 1);
+                }
+            }
+        }
+        console.log(currArr);
+        //    方法2
+    }
+
+    //  2.4 判断是否为对称数组
+    fun_9();
+
+    function fun_9() {
+        var arr = [1,2,3,2,1];
+        var len = arr.length; // 数组长度
+        for(var i = 0; i<len; i++){
+            if(arr[i] != arr[len -(i + 1)]){
+                console.log("该数组不是对称数组");
+                return;
+            }
+        }
+        console.log("该数组是对称数组");
     }
 </script>
 </html>

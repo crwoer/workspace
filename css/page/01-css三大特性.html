@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    /*
+    css三大特性
+        层叠性：相同样式后面设置的会覆盖前面设置的
+        继承性：子标签会继承父标签的文本类样式
+        优先级：继承*<标签选择器<类名选择器<id选择器<行内样式<!important
+    */
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+    }
+    div{
+        background-color: orange;
+        color: skyblue;
+        font-size: 30px;
+    }
+</style>
+<body>
+<div>
+    <P>div里面的p标签</P>
+</div>
+</div>
+</body>
+</html>
