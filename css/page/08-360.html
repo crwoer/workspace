@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .w{
+        width: 1180px;
+        margin: 0 auto;
+    }
+    .oh{
+        overflow: hidden;
+
+    }
+    .fl{
+        float: left;
+    }
+    .fr{
+        float: right;
+    }
+    .header_top .logo{
+        width: 144PX;
+        height: 110PX;
+        background: url("../img/logo.png") no-repeat center;
+        background-size: contain;
+        margin-right: 188px;
+    }
+    .header_top .search{
+        width: 486px;
+        height: 38px;
+        border: 2px solid #1DB69A;
+        margin-top: 30px;
+        padding-left: 5px;
+    }
+    .search input[type=text]{
+        height: 38px;
+        width: 347px;
+        border: none; /*清除边框*/
+        outline: none;  /*清除轮廓线*/
+        padding: 0 15px;
+    }
+    .search img{
+        width: 17px;
+        height: 19px;
+        margin-top: 10px;
+    }
+    .search input[type=button]{
+        width: 88px;
+        height: 39px;
+        background-color:#1DB69A;
+        border: none; /*清除边框*/
+        outline: none;  /*清除轮廓线*/
+        color: white;
+        font-size: 17px;
+    }
+    .list ul li{
+        float: left;
+        list-style: none;
+        width: 80px;
+        height: 26px;
+        /*margin-right: 20px;*/
+        padding: 15px 0;
+    }
+    .list .login{
+        background: url("../img/user.png") no-repeat center left;
+        padding: 15px 0 15px 30px;
+    }
+    .list .app{
+        background: url("../img/tv.png") no-repeat center left;
+        padding: 15px 0 15px 30px;
+    }
+    .header_top .list{
+        margin-top: 25px;
+    }
+
+    .header_list{
+        border-top: 1px solid #e8e8e8;
+        background: #fff;
+        border-bottom: 1px solid #e8e8e8;
+    }
+    .header_list li {
+        list-style: none;
+        float: left;
+        line-height: 45px;
+        text-align: center;
+        cursor: pointer;
+        padding: 0 14px;
+    }
+    .active{
+        color: #1DB69A;
+        border-bottom: 2px solid #1DB69A;
+    }
+</style>
+<body>
+<div class="header w">
+    <div class="header_top oh">
+        <!--logo-->
+        <div class="logo fl"></div>
+        <!--search-->
+        <div class="search fl oh">
+            <input type="text" class="fl" placeholder="以家人之名">
+            <img src="../img/music.png" alt="">
+            <input type="button" class="fr" value="搜索">
+        </div>
+        <!--list-->
+        <div class="list fr">
+            <ul class="oh">
+                <li class="login">立即登录</li>
+                <li>观看记录</li>
+                <li class="app">客户端下载</li>
+            </ul>
+        </div>
+    </div>
+    <div class="header_list">
+        <div class="w oh">
+            <ul>
+                <li class="active">首页</li>
+                <li>电视剧</li>
+                <li>综艺</li>
+                <li>电影</li>
+                <li>儿童</li>
+                <li>动漫</li>
+                <li>小品</li>
+                <li>搞笑</li>
+                <li>娱乐</li>
+                <li>爆点</li>
+                <li>音乐</li>
+                <li>广场舞</li>
+                <li>排行榜</li>
+                <li>快资讯</li>
+                <li>美女</li>
+                <li>体育</li>
+                <li>游戏</li>
+                <li>专题</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

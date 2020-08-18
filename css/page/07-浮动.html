@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .bigBox div{
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        float: right;
+    }
+    .box1{
+        /*
+            浮动  float
+                left
+                right
+                特点:
+                    不占位置
+                清除浮动：
+                    给父元素添加   overflow: hidden;
+        */
+        /*float: left;*/
+    }
+    .bigBox{
+        /*width: auto;*/
+        /*height: 300px;*/
+        background-color: pink;
+        /*padding: 10px;*/
+        border: 1px solid black;
+        overflow: hidden;
+    }
+</style>
+<body>
+<div class="bigBox">
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+</div>
+</body>
+</html>

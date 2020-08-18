@@ -5,7 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-
+<!--2.6题的按钮-->
+<button type="button" onclick="fun_11()">2.6题</button>
 </body>
 <script>
     //  1.1求100以内所有能被3和7同时整除的和
@@ -153,15 +154,72 @@
     fun_9();
 
     function fun_9() {
-        var arr = [1,2,3,2,1];
+        var arr = [1, 2, 3, 2, 1];
         var len = arr.length; // 数组长度
-        for(var i = 0; i<len; i++){
-            if(arr[i] != arr[len -(i + 1)]){
+        for (var i = 0; i < len; i++) {
+            if (arr[i] != arr[len - (i + 1)]) {
                 console.log("该数组不是对称数组");
                 return;
             }
         }
         console.log("该数组是对称数组");
+    }
+
+    //  2.5 数组的排序
+    fun_10();
+
+    function fun_10() {
+        var arr = [5, 1, 2, 4, 3, 50, 45, 15, 60];
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = 0; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    var a = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = a;
+                }
+            }
+        }
+        console.log(arr);
+    }
+
+    //  2.6 提示用户输入班级人数，求总成绩、平均分、最高分、最低分
+    // fun_11();
+
+    function fun_11() {
+        var res = prompt("请输入班级人数：");
+        var sum = 0;// 班级人数
+        if (res != null && res != "") {
+            sum = Number(res);
+            console.log(sum);
+            test();
+
+            function test() {
+                var score = prompt("请输入" + sum + "名同学的分数用‘;’号分隔\n注意缺考为空值");
+                var arr = [];
+                arr = score.split(";");
+                console.log(arr);
+                if (arr.length != sum) {
+                    alert("输入成绩人数不相符");
+                    test();
+                }
+            }
+
+            //  总成绩
+            var total = 0;
+            //  平均分
+            var mean = 0;
+            //  最高分
+            var maxScore = arr[0];
+            //  最低分
+            var minScore = arr[0];
+
+            for(var i = 0;i<arr.length;i++){
+                total += arr[i];
+                maxScore > arr[i] ? maxScore = maxScore : arr[i];
+                minScore < arr[i] ? minScore = minScore : arr[i];
+            }
+            alert("全班的总成绩为：" + total + "")
+        }
     }
 </script>
 </html>
