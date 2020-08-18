@@ -190,14 +190,15 @@
         var sum = 0;// 班级人数
         if (res != null && res != "") {
             sum = Number(res);
-            console.log(sum);
+            // console.log(sum);
+            var arr = [];
             test();
 
             function test() {
                 var score = prompt("请输入" + sum + "名同学的分数用‘;’号分隔\n注意缺考为空值");
-                var arr = [];
+                arr = [];
                 arr = score.split(";");
-                console.log(arr);
+                // console.log(arr);
                 if (arr.length != sum) {
                     alert("输入成绩人数不相符");
                     test();
@@ -213,13 +214,33 @@
             //  最低分
             var minScore = arr[0];
 
-            for(var i = 0;i<arr.length;i++){
-                total += arr[i];
-                maxScore > arr[i] ? maxScore = maxScore : arr[i];
-                minScore < arr[i] ? minScore = minScore : arr[i];
+            for (var i = 0; i < arr.length; i++) {
+                // console.log(arr[i])
+                total += Number(arr[i]);
+                mean = total / sum;
+                maxScore > arr[i] ? maxScore = maxScore : maxScore = arr[i];
+                minScore < arr[i] ? minScore = minScore : minScore = arr[i];
             }
-            alert("全班的总成绩为：" + total + "")
+            alert("全班的总成绩为：" + total + "\n平均分为：" + mean + "\n最高分为：" + maxScore + "\n最低分为：" + minScore);
         }
     }
+
+    //  2.7 歌唱比赛中有5位评审给一个选手打分，去掉一个最高分，去掉一个最低分，在求平均分以及输出最高分和最低分
+    fun_12();
+
+    function fun_12() {
+        var arr = [8.5, 9, 7.8, 9.4, 10];
+        var sum = 0;
+        var max = arr[0];
+        var min = arr[0];
+        for (var i = 0; i < arr.length; i++) {
+            sum += arr[i];
+            max > arr[i] ? max = max : max = arr[i];
+            max < arr[i] ? max = max : max = arr[i];
+        }
+        console.log("评分详细："+ arr +"\n平均分为：" + (sum - max - min) / 5 + "\n最高分为：" + max + "\n最低分为：" + min);
+    }
+
+
 </script>
 </html>
