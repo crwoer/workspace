@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>360影视-综艺栏目</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .oh{
+        overflow: hidden;
+    }
+    .content{
+        width: 1000px;
+        height: 336px;
+        margin: 100px auto;
+        border: 1px dashed #ccc;
+    }
+    .left,.right{
+        float: left;
+    }
+    .left{
+        width: 380px;
+        height: 321px;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+    .left .cover{
+        width: 380px;
+        height: 268px;
+        position: relative;
+    }
+    .left .cover .img {
+        width: 380px;
+        height: 268px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .left .cover .play{
+        width: 380px;
+        height: 268px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        background: rgba(0,0,0,.5) url("../img/play.png") no-repeat center;
+    }
+    .left .cover:hover div{
+        display: block;
+    }
+    .left .introduce {
+        width: 38px;
+        height: 53px;
+        cursor: pointer;
+    }
+    .left .introduce .title{
+        font-size: 14px;
+        padding: 7px 5px 0 5px;
+        display: inline-block;
+        width: 370px;
+        height: 20px;
+        line-height: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .left .introduce .cont{
+        font-size: 12px;
+        display: inline-block;
+        width: 370px;
+        height: 18px;
+        line-height: 18px;
+        color: #999;
+        margin: 0 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .left .introduce:hover .title{
+        color: #1DB69A;
+    }
+    /*right*/
+    .right{
+        width: 580px;
+        height: 268px;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+    .right> ul{
+        display: block;
+        list-style: none;
+        overflow: hidden;
+    }
+    .right .ul1{
+        margin-bottom: 15px;
+    }
+    .right > ul > li{
+        height: 153px;
+        width: 180px;
+        float: left;
+        margin-left: 20px;
+    }
+    .right > ul > li:nth-child(1){
+        margin: 0;
+    }
+    .right ul > li > .cover{
+        width: 180px;
+        height: 100px;
+        position: relative;
+    }
+    .right ul > li > .cover .img{
+        width: 180px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .right ul > li > .cover .play{
+        width: 180px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        background: rgba(0,0,0,.5) url("../img/play.png") no-repeat center;
+    }
+    .right ul > li > .cover:hover div{
+        display: block;
+    }
+    .right ul > li > .introduce {
+        width: 180px;
+        height: 53px;
+        cursor: pointer;
+    }
+    .right ul > li > .introduce .title{
+        font-size: 14px;
+        padding: 7px 5px 0 5px;
+        display: inline-block;
+        width: 170px;
+        height: 20px;
+        line-height: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .right ul > li > .introduce .cont{
+        font-size: 12px;
+        display: inline-block;
+        width: 170px;
+        height: 18px;
+        line-height: 18px;
+        color: #999;
+        margin: 0 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .right > ul > li .introduce:hover .title{
+        color: #1DB69A;
+    }
+</style>
+<body>
+<div class="content oh">
+    <div class="left">
+        <div class="cover">
+            <img class="img" src="../img/01.png">
+            <div class="play"></div>
+        </div>
+        <div class="introduce">
+            <p class="title">快乐大本营</p>
+            <p class="cont">白冰《无价之姐》助阵英皇</p>
+        </div>
+    </div>
+    <div class="right">
+        <ul class="ul1">
+            <li>
+                <div class="cover">
+                    <img class="img" src="../img/10.jpg">
+                    <div class="play"></div>
+                </div>
+                <div class="introduce">
+                    <p class="title">乘风破浪的姐姐</p>
+                    <p class="cont">加更！姐姐复活赛前蓄力派对</p>
+                </div>
+            </li>
+            <li>
+                <div class="cover">
+                    <img class="img" src="../img/11.gif">
+                    <div class="play"></div>
+                </div>
+                <div class="introduce">
+                    <p class="title">奔跑吧4</p>
+                    <p class="cont">跑男团竟主动抢踩指压板</p>
+                </div>
+            </li>
+            <li>
+                <div class="cover">
+                    <img class="img" src="../img/12.jpg">
+                    <div class="play"></div>
+                </div>
+                <div class="introduce">
+                    <p class="title">中餐厅 4</p>
+                    <p class="cont">黄晓明现场教跳《无价之姐》</p>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul2">
+            <li>
+                <div class="cover">
+                    <img class="img" src="../img/20.gif">
+                    <div class="play"></div>
+                </div>
+                <div class="introduce">
+                    <p class="title">青春环游记2</p>
+                    <p class="cont">爆笑古装《红色高跟鞋》！</p>
+                </div>
+            </li>
+            <li>
+                <div class="cover">
+                    <img class="img" src="../img/21.jpg">
+                    <div class="play"></div>
+                </div>
+                <div class="introduce">
+                    <p class="title">快乐大本营</p>
+                    <p class="cont">白冰《无价之姐》助阵英皇</p>
+                </div>
+            </li>
+            <li>
+                <div class="cover">
+                    <img class="img" src="../img/22.gif">
+                    <div class="play"></div>
+                </div>
+                <div class="introduce">
+                    <p class="title">乐队的夏天2</p>
+                    <p class="cont">改编赛！五条人极度洗脑</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

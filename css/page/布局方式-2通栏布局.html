@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .bg{
+        background-color: #eaeaf5;
+        border: 1px dashed #ccc;
+        text-align: center;
+    }
+    .page{
+        width: 1180px;
+        height: auto;
+        margin: 0 auto;
+    }
+    .top{
+        height: 50px;
+        margin-top: 10px;
+    }
+    .content{
+        width: 800px;
+        margin: 10px auto;
+        height: auto;
+
+    }
+    .content .banner{
+        height: 100px;
+        margin-top: 10px;
+    }
+    .content .center{
+        overflow: hidden;
+        margin-top: 10px;
+    }
+    .content .center div{
+        float: left;
+        height: 70px;
+        width: 190px;
+        margin-left: 10px;
+    }
+    .content .foot{
+        margin-top: 10px;
+        overflow: hidden;
+    }
+    .content .foot div{
+        height: 200px;
+        width: 190px;
+        float: left;
+        margin-left: 10px;
+    }
+    .content .center div:nth-child(1),.content .foot div:nth-child(1){
+        margin-left: 0;
+    }
+    .footer{
+        height: 150px;
+        margin-top: 10px;
+    }
+</style>
+<body>
+<div class="page">
+    <div class="top bg">top</div>
+    <div class="content">
+        <div class="banner bg">banner</div>
+        <div class="center">
+            <div class=" bg"></div>
+            <div class=" bg"></div>
+            <div class=" bg"></div>
+            <div class=" bg"></div>
+        </div>
+        <div class="foot">
+            <div class=" bg"></div>
+            <div class=" bg"></div>
+            <div class=" bg"></div>
+            <div class=" bg"></div>
+        </div>
+    </div>
+    <div class="footer bg">footer</div>
+</div>
+</body>
+</html>
