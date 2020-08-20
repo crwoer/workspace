@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第六天作业</title>
+</head>
+<body>
+<script>
+    console.log("===========1.1数组操作-首位交换===============");
+    var arr = ["鹿晗", "王俊凯", "蔡徐坤", "彭于晏", "周杰伦", "刘德华", "赵本山"];
+    var interim = arr[0];
+    arr[0] = arr[arr.length - 1];
+    arr[arr.length - 1] = interim;
+    console.log(arr);
+
+    console.log("===========1.2函数封装-驼峰命名转换============");
+    var str = "get-element-by-id";
+    console.log(toCamelCase(str));
+
+    function toCamelCase(str) {
+        var strArr = str.split("-");
+        for (var i = 1; i < strArr.length; i++) {
+            strArr[i] = strArr[i].slice(0, 1).toUpperCase() + strArr[i].slice(1);
+        }
+        return strArr.join("");
+    }
+
+
+    console.log("===========2.1随机选学员============");
+    var arr = ["鹿晗", "王俊凯", "蔡徐坤", "彭于晏", "周杰伦", "刘德华", "赵本山"];
+
+    function random(arr) {
+        var currIdex = [];
+        var index = 0;
+        for (var i = 1; i <= 4; i++) {
+            index = Math.floor(Math.random() * arr.length);
+            if(index){
+
+            }
+        }
+    }
+</script>
+</body>
+</html>

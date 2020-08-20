@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    *  =  把右边的表达式或常量赋值给左边的变量
+    *  复合赋值运算符：
+    *  +=  -+  *=  /=  %=
+    *
+    *  一元运算符
+    *   ++  --   让自身的数+1   让自身-1
+    *   单独使用前++和后++
+    *   复合使用：
+    *       前++  先加后用
+    *       后++  先用后加
+    * */
+
+    var num1 = 10;
+    // num1 = num1 + 5;
+    // num1 += 5;
+    console.log(num1+=5);  // 15
+    console.log(num1-=5);  // 10
+    console.log(num1*=5);  // 50
+    console.log(num1/=5);  // 10
+    console.log(num1%=5);  // 0
+
+    // var num2 = 5;
+    // console.log(num2++);  //5
+    // console.log(num2);  // 6
+    //
+    // console.log(++num2);  //7
+    // console.log(num2);  // 7
+
+    var num2 = 5;
+    var res = num2++ + ++num2;
+    console.log(num2);  // 7
+    console.log(res);   // 12
+
+
+</script>
+</body>
+</html>

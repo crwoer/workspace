@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 分支结构：有多个分支时只会执行一个分支，要么不执行
+    * if三种写法：
+    *   if(条件表达式){
+    *       当条件表达式为true时执行大括号中的代码（内容）
+    *   }
+    *
+    *
+    *   if(条件表达式){
+    *       当条件表达式为true时执行大括号中的代码（内容）
+    *   }else{
+    *       当条件表达式为false时执行大括号中的代码（内容）
+    *       }
+    *
+    *
+    *   if(条件表达式1){
+    *       当条件表达式1为true，时执行大括号中的代码（内容）
+    *   }else if(条件表达2){
+    *       当条件表达式2为true
+    *   }else if(条件表达式n){
+    *       当条件表达式n为true
+    *   }
+    *
+    * */
+    var age = 20;
+    if (age >= 18) {
+        console.log("可以去网吧");
+    }
+
+
+    if (age >= 18) {
+        console.log("可以去网吧");
+    } else {
+        console.log("不可以去网吧");
+    }
+
+
+    var score = +prompt("请输入你的分数：");
+    if (score < 0 || score > 100) {
+        console.log("分数有误");
+    }else if(score >= 90){
+        console.log("A");
+    }else if(score >= 80){
+        console.log("B");
+    }else if(score >= 70){
+        console.log("C");
+    }else if(score >= 60){
+        console.log("D");
+    }else{
+        console.log("E");
+    }
+</script>
+</body>
+</html>

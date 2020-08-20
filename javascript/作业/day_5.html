@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第五天</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    console.log("===========2.1判断指定数据是否存在于指定数组中=============");
+    var arr1 = ["张瑞淑", "徐海涛", "谢岗岗", "薛鹏", "魏明杨", "党婷", "熊飞", "郑翠翠", "李航卫", "屈涛"];
+    console.log(includes("徐海涛", arr1));
+
+    function includes(data, arr) {
+        for (var i = 0; i < arr.length; i++) {
+            if (data === arr[i]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    console.log("===========2.2筛选未提交反馈的学员=============");
+
+    var arr2 = ["张瑞淑", "徐海涛", "谢岗岗", "薛鹏", "魏明杨", "党婷", "熊飞", "郑翠翠", "李航卫", "屈涛",
+        "汪孝双", "代攀飞", "武志钰", "王亚龙", "周芙榕", "李涛", "郝颖", "文冲洋", "王旭拯", "胡佳豪", "寇晓丽",
+        "马晓晗", "王思聪", "张绿", "李德", "郑萍", "张凯", "张嘉成", "葛云侠", "杨磊", "任变", "景德", "高卷林",
+        "刘益凡", "赵娜", "陈章鸣", "张荣召", "赵凯旋", "程倩倩", "脱朝平", "刘吉利", "郭苗苗", "马建峰", "潘瑞",
+        "闫翔", "马晨", "李轩轩", "黄红梅", "刘书彬", "罗强", "刘东", "王可可", "陈泽文", "李嘉琪", "段佳琦", "黄燕",
+        "邱淑鸿", "宋翔宇", "王波", "樊琳", "王兆国", "许成", "李兴"];
+
+    var currentArr = ["徐海涛", "谢岗岗", "魏明杨", "党婷", "熊飞", "郑翠翠", "李航卫", "屈涛", "汪孝双", "代攀飞",
+        "武志钰", "王亚龙", "周芙榕", "李涛", "郝颖", "文冲洋", "王旭拯", "胡佳豪", "寇晓丽", "马晓晗", "张绿",
+        "李德", "郑萍", "张凯", "张嘉成", "葛云侠", "杨磊", "任变", "景德", "高卷林", "刘益凡", "赵娜", "陈章鸣",
+        "张荣召", "赵凯旋", "程倩倩", "脱朝平", "刘吉利", "郭苗苗", "马建峰", "潘瑞", "闫翔", "马晨", "李轩轩",
+        "黄红梅", "刘书彬", "罗强", "刘东", "陈泽文", "李嘉琪", "段佳琦", "黄燕", "邱淑鸿", "宋翔宇", "王波", "樊琳",
+        "王兆国", "许成", "李兴"];
+
+    console.log(test2_2(arr2, currentArr));
+
+    function test2_2(arr1, arr2) {
+        // 未提交反馈的同学
+        var unStudent = [];
+        var isChunZai = false;
+        for (var i = 0; i < arr1.length; i++) {
+            for (var j = 0; j < arr2.length; j++) {
+                if (arr1[i] == arr2[j]) {
+                    isChunZai = true;
+                    break;
+                }else{
+                    isChunZai = false;
+                }
+            }
+            if(!isChunZai){
+                unStudent.push(arr1[i])
+            }
+        }
+        return unStudent;
+    }
+
+    console.log("========3.传入原文，输出密文============");
+
+    var num = 8542;
+    console.log(test2(num));
+
+    function test2(data) {
+        var q = (parseInt(data / 1000) + 5) % 10;
+        var b = (parseInt(data / 100 % 10) + 5) % 10;
+        var s = (parseInt(data / 10 % 10) + 5) % 10;
+        var g = ((data % 10) + 5) % 10;
+        q += g;
+        g = q - g;
+        q = q - g;
+
+        b += s;
+        s = b - s;
+        b = b - s;
+        var currNum = parseInt("" + q + b + s + g);
+        // console.log(currNum);
+        return currNum;
+    }
+
+</script>
+</html>

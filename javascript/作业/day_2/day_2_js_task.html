@@ -167,7 +167,9 @@
     function fun_6() {
         var score = prompt("考试得分：");
         if (score != null && score != "") {
-            if (score >= 90) {
+            if(score <0 || score > 100){
+                console.log("成绩有误");
+            }else if (score >= 90) {
                 console.log("A");
             } else if (score >= 80 && score < 90) {
                 console.log("B");
@@ -178,6 +180,7 @@
             } else {
                 console.log("E");
             }
+
         }
     }
 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * switch(固定值){
+    *   case 常量值:
+    *       语句体;
+    *       break;
+    *   case ...
+    *   default:
+    *       语句体;
+    *       break;
+    *
+    * }
+    *
+    *
+    * 流程：
+    *       拿
+    *
+    * 注意事项：
+    *   1.switch用于规定值比较   if用于范围比较
+    *   2.case和default后必须break  break可以用于结束switch
+    *   3.switch里面的内容是无序的，但是执行是有序的，先执行case后执行default
+    * case穿透：
+    *   当匹配到的case后没有break，则不管下一个case是否满足条件，都会执行下一个case语句体，直到遇到break位置
+    *
+    * */
+
+    var week = +prompt("请输入对应星期：");
+    switch (week) {
+        case 1:
+            console.log("星期一");
+            break;
+        case 2:
+            console.log("星期二");
+            break;
+        case 3:
+            console.log("星期三");
+            break;
+        case 4:
+            console.log("星期四");
+            break;
+        case 5:
+            console.log("星期五");
+            break;
+        case 6:
+            console.log("星期六");
+            break;
+        case 7:
+            console.log("星期七");
+            break;
+        default:
+            console.log("星期有误");
+            break;
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 比较运算符
+    *   比较左右两边的表达式是否满足条件  结果  true   false
+    *    > 小于      < 大于     == 等于     >= 大于等于    <= 小于等于    != 不等
+    *    隐式转换：当比较两边的数据类型不一致时，会自动转换为相同类型后在比较
+    *       #####  转换的顺序
+    *       ##   object --> String  -->  Number
+    *       ##   boolean --> Number
+    *    不隐式转换：
+    *       ===全等   !===不全等     先比较数据类型后比较值
+    *
+    * */
+
+    //  隐式转换
+    console.log("1"==1); //true
+    console.log(true == 1);  //true
+
+
+    //  不隐式转换
+    console.log("1"===1); //false
+    console.log(true === 1);  //false
+
+    var num1 = 10;
+    var num2 =15;
+    console.log(num1>num2);
+    console.log(num1<num2);
+    console.log(num1==num2);
+    console.log(num1>=num2);
+    console.log(num1<=num2);
+    console.log(num1!=num2);
+</script>
+</body>
+</html>
