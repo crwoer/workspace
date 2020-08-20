@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>随机点名系统</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .box {
+        width: 1180px;
+        height: auto;
+        margin: 100px auto;
+        background: url("../img/bg.jpg") no-repeat center;
+        height: 500px;
+        text-align: center;
+    }
+
+    .box p {
+        display: block;
+        padding-top: 50px;
+        font-size: 26px;
+        color: white;
+    }
+
+    .box button {
+        margin-top: 20px;
+        padding: 5px 20px;
+        color: white;
+        background-color: skyblue;
+        border: none;
+        font-size: 18px;
+    }
+
+    .container .seat {
+        height: auto;
+        padding-bottom: 10px;
+        border: 1px dashed #ccc;
+        margin-top: 50px;
+    }
+
+    .container .seat ul {
+        overflow: hidden;
+    }
+
+    .container .seat ul li {
+        list-style: none;
+        width: 80px;
+        height: 30px;
+        box-shadow: 0 0 10px #ccc;
+        background-color: rgba(255, 255, 255, 0.8);
+        float: left;
+        margin-left: 10px;
+        margin-top: 10px;
+        line-height: 30px;
+    }
+</style>
+<body>
+<div class="box">
+    <p>随机点名系统v1.0</p>
+    <button type="button" onclick="random()">随机点名</button>
+    <div class="container">
+        <div class="seat">
+            <ul id="nameList">
+
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    var arr = ["罗仪", "何桂泉", "蔡法坤", "李伟航", "杨丁", "王震杰", "李峰",
+        "张国鸿", "刘舒雯", "林成", "余宏志", "邓昊天", "陈成", "张文印",
+        "李桂鑫", "李佳伟", "庞家豪", "陈佳玲", "谢宇佳", "张超", "陈德佳",
+        "黄永聪", "曾伟键", "林铎敏", "康家豪", "夏克臣", "庞荣洲", "庄溪泽",
+        "谢镇源", "陈近龙", "郭学峰", "谢光玉", "黄锋琳", "郭秋阳", "陈蕾冰",
+        "廖志彬", "谢敏", "梁伟健", "田春元", "李波", "冼俊程", "黄庆君",
+        "陈义东", "张凤军", "许英显", "杨谋", "谢嘉权", "姜梦辉", "陈春梅",
+        "李成根", "杨育贤", "胡奕翔", "谢志强", "翁凯瑞", "霍淇安", "朱杭钏",
+        "黎力铭", "唐双波", "陈清溪"];
+    var num = arr.length;  // 人数
+    var nameList = document.getElementById('nameList');
+    for (var i = 0; i < num; i++) {
+        nameList.innerHTML += "<li id='" + "index_" + i + "' >" + arr[i] + "</li>";
+    }
+    function random() {
+        var ranDom = Math.floor(Math.random() * num)
+        var curr = 0;  // 当前选中的名字
+        console.log(ranDom+1);
+        var setTime = setInterval(function(){
+            if(curr == ranDom){
+                clearInterval(setTime);
+            }
+            var inde_x = "index_" + curr;
+            var currIndex = document.getElementById(inde_x);
+            if(curr > 0){
+                var inde_x_1 = "index_" + (curr - 1);
+                var currIndex_1 = document.getElementById(inde_x_1);
+                currIndex_1.style.backgroundColor = "#dfdcde";
+            }
+            currIndex.style.backgroundColor = "orange";
+            curr ++;
+        },200)
+    }
+</script>
+</html>

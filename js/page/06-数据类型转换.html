@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*转数值
+    * Number(数据)  只能转换纯数字
+    * parseInt(数据)  可以转换部分数字,前提是第一个字符必须是数字   只能转换整数
+    * pareFloat(数据)   可以转换部分数字,前提是第一个字符必须是数字   可以保留小数
+    * */
+
+
+    var str="123.4px";
+    console.log(Number(str));
+    console.log(parseInt(str));
+    console.log(parseFloat(str));
+
+    /*转字符串
+    *   String(数据)
+    *   数据.toString()   不推荐使用  null和undefined无法调用toString()   会报错
+    *
+    *   Uncaught TypeError: Cannot read property 'toString' of null/undefined
+    *   null和undefined无法调用toString()
+    * */
+
+
+    var num = 10;
+    var flag = true;
+    var un = null;
+    var unde ;
+    console.log(num.toString());
+    console.log(flag.toString());
+    console.log(un.toString());
+    console.log(unde.toString());
+    //
+    console.log(String(num));
+    console.log(String(flag));
+    console.log(String(nu));
+    console.log(String(unde));
+
+
+
+
+    /*转布尔类型
+    *   Boolean(数据)
+    *       为false的六中情况
+    *           false  ""  null  undefined   0  NAN
+    * */
+
+    console.log(Boolean(false));
+    console.log(Boolean(""));
+    console.log(Boolean(null));
+    console.log(Boolean(undefined));
+    console.log(Boolean(0));
+    console.log(Boolean(NAN));
+
+</script>
+</body>
+</html>

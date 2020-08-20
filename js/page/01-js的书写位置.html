@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="按钮" onclick="alert(3)">
+</body>
+<script>
+    /*
+    * 1.内嵌式  学习阶段
+    *   js代码写在script标签内部，作用于当前网页
+    * 2.外链式  可以用于多个网页  工作中使用  （推荐）
+    *   新建一个以.js结尾的文件
+    *   使用script标签中的src属性引入外部js文件
+    * 3.行内式
+    *   写在标签内部  事件=js代码  只能作用于当前标签  不推荐使用
+    * 注意事项：
+    *   外链式不能和内嵌式一起使用
+    * */
+
+
+
+    /*
+    *
+    * alert()   弹窗
+    *
+    * */
+    alert(1);
+</script>
+<script src="../js/test.js">
+    // alert(4);  禁止使用
+</script>
+</html>

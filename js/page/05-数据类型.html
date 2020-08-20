@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 基本数据类型
+    *   字符串  String
+    *       只要用单引或者双引号引起来的都叫字符串
+    *   数值型   Number
+    *       整数  小数  正负数   NAN（不是一个数字）
+    *       NAN  数据类型转换失败时输出
+    *   布尔值  boolean
+    *       true   false
+    *   空类型   null
+    *       typeof无法检测null类型的正确结果，检测出的式object
+    *   未定义类型   undefined
+    *       创建变量没有赋值
+    *
+    *
+    * 检测某一个数据是什么数据类型
+    *   typeof 数据
+    *   typeof(数据)
+    *
+    *
+    *
+    *
+    *
+    * */
+
+    var str1 = "字符串";
+    var str2 = '字符串';
+    console.log(typeof str1,str1,str2);
+
+    var num1 = 10 ;
+    var num2 = 10.1;
+    var num3 = -3;
+    console.log(typeof num1,num1,num2,num3);
+
+    var flag1 = true;
+    var flag2 = false;
+    console.log(typeof flag1,flag1,flag2);
+
+    var nu = null ;
+    console.log(typeof nu,nu);
+
+
+    var unfi ;
+    console.log(typeof unfi , unfi);
+</script>
+</body>
+</html>
