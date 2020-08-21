@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    td{
+        border: 1px solid skyblue;
+    }
+    td:hover{
+        background-color: pink;
+    }
+</style>
+<body>
+<input type="text" id="row_text"><button type="button" onclick="Fnu_cfb()">点击</button>
+<script>
+    //11.计算1-100之间总和，除了3的倍数以及7的倍数
+    var sum = 0;
+    for (var i = 1; i <= 100; i++) {
+        if (i % 3 == 0 || i % 7 == 0) {
+            continue;
+        }
+        sum += i;
+    }
+    console.log(sum);
+
+
+    //12.定义字符串为用户名和密码，没有输入正确循环提示请输入用户名和密码，输入正确停止循环，提示登录成功
+    // var userName = "admin";
+    // var passStr = "123456";
+    // while(true){
+    //     var user = prompt("请输入用户名：");
+    //     var pass = prompt("请输入密码：");
+    //     if(user == userName && pass == passStr){
+    //         alert("登录成功");
+    //         break;
+    //     }
+    // }
+
+    //13。以表格的方式输出乘法表,其中行数通过用户输入，鼠标悬停显示背景颜色
+    function Fnu_cfb(){
+        var row = document.getElementById("row_text").textContent;
+        console.log(row);
+    }
+    function fnu_cfb(y){
+        document.write("<table>");
+        for (var y = 1; y <= 9; y++) {
+            document.write("<tr>")
+            for (var x = 1; x <= y; x++) {
+                document.write("<td>");
+                document.write(x + "x" + y + "=" + x * y + "&nbsp;");
+                document.write("</td>");
+            }
+            document.write("</tr>")
+        }
+        document.write("</table>")
+    }
+
+
+</script>
+</body>
+</html>

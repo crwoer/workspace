@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // ★
+    //画5 x 5 矩阵 ★
+    for (var y = 0; y < 5; y++) {
+        for (var x = 0; x < 5; x++) {
+            document.write("★");
+        }
+        document.write("<br/>");
+    }
+    document.write("<br/>");
+
+    //正直角三角形
+    for (var y = 1; y <= 5; y++) {
+        for (var x = 1; x <= y; x++) {
+            document.write("★");
+        }
+        document.write("<br/>");
+    }
+    document.write("<br/>");
+
+    //倒直角三角形
+    for (y = 1; y <= 5; y++) {
+        for (var x = 5; x >= y; x--) {
+            document.write("★");
+        }
+        document.write("<br/>");
+    }
+    document.write("<br/>");
+
+
+    //等腰三角形
+    // for (y = 1; y <= 11; y++) {
+    //     if (y <= 6) {
+    //         for(var x = 1; x <= y; x++){
+    //             document.write("★");
+    //         }
+    //     }else{
+    //         for(var x = 5; x >= y-6; x--){
+    //             document.write("★");
+    //         }
+    //     }
+    //     document.write("<br/>");
+    // }
+
+    for (y = 1; y <= 5; y++) {
+        for (var x = 5; x >= y; x--) {
+            document.write("&nbsp;&nbsp;");
+        }
+        for (var i = 1; i <= y; i++) {
+            document.write("★"+"&nbsp;&nbsp;");
+        }
+        document.write("<br/>");
+    }
+    document.write("<br/>");
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    console.log("=======================");
+    //1.求1-100之间能被3整除的数字
+    var i = 1;
+    var numStr = "";
+    while (i <= 100) {
+        if (i % 3 == 0) {
+            numStr += i + ",";
+        }
+        i++;
+    }
+    console.log(numStr);
+
+
+    console.log("=======================");
+    //2.计算1-100之间所有数字的和
+    var s = 1;
+    var sum = 0;
+    while (s <= 100) {
+        sum += s;
+        s++;
+    }
+    console.log(sum);
+
+
+    console.log("=======================");
+    //3.求6的阶乘
+    var jieCheng = 1;
+    var j = 1;
+    while (j <= 6) {
+        jieCheng *= j;
+        j++;
+    }
+    console.log(jieCheng);
+
+
+    console.log("=======================");
+    //4.求1-100之间的偶数之和
+    var ouShu = 0;
+    var o = 1;
+    while (o <= 100) {
+        if (o % 2 == 0) {
+            ouShu += o;
+        }
+        o++;
+    }
+    console.log(ouShu);
+
+
+    console.log("=======================");
+    //5.求1-100之间的奇数之和
+    var jiShu = 0;
+    var js = 1;
+    while (js <= 100) {
+        if (js % 2 != 0) {
+            jiShu += js;
+        }
+        js++;
+    }
+    console.log(jiShu);
+
+
+    console.log("=======================");
+    //6.求1-100之间能被7整除的数字
+    var i7 = 1;
+    var num7Str = "";
+    while (i7 <= 100) {
+        if (i7 % 7 == 0) {
+            num7Str += i7 + ",";
+        }
+        i7++;
+    }
+    console.log(num7Str);
+
+
+    console.log("=======================");
+    //7.画★，五排、每排五个
+    var x = 1;
+    var xStr = "";
+    while (x <= 5) {
+        xStr += "★ ★ ★ ★ ★" + "\n";
+        x++;
+    }
+    console.log(xStr);
+
+</script>
+</body>
+</html>

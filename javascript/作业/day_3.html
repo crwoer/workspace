@@ -7,6 +7,7 @@
 <body>
 <!--2.6题的按钮-->
 <button type="button" onclick="fun_11()">2.6题</button>
+<br>
 </body>
 <script>
     //  1.1求100以内所有能被3和7同时整除的和
@@ -27,16 +28,18 @@
 
     function fun_2() {
         for (var i = 1; i <= 10; i++) {
-            var str = '';
+            // var str = '';
             for (var x = 1; x <= 10; x++) {
                 if (i == x || i + x == 11) {
-                    str += "O";
+                    // str += "O";
+                    document.write("0");
                 } else {
-                    str += "*";
+                    // str += "*";
+                    document.write("*");
                 }
             }
-            str += "\n";
-            ;
+            // str += "\n";
+            document.write("<br/>");
         }
     }
 
