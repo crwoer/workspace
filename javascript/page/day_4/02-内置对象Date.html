@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 创建date的三种方式
+    *   new Date();    系统当前时间
+    *   new Date(time);  根据time这个毫秒值返回对应的时间
+    *   new Date(timeString);  根据timeString这个日期字符串返回对应的时间 1
+    *
+    * 获取毫米值   返回自1970年1月1日到指定日期的毫秒值
+    *   dateObj.getTime();
+    *   dateObj.valueof();
+    *   +dateObj;
+    *   Date.now()  只能获取系统当前时间的毫秒值
+    * */
+
+    var date1 = new Date();
+    console.log(date1);
+    console.log(date1.getTime());
+    console.log(date1.valueOf());
+    var date2 = new Date(date1.valueOf());
+    console.log(+date2);
+    console.log(Date.now());
+
+
+    var date3 = new Date("2020-8-24 10:25:00");
+    console.log(date3);
+</script>
+</body>
+</html>

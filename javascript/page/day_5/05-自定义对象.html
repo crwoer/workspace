@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 创建对象：
+    *   new Object()
+    * */
+
+    var test = new Object();
+    /*
+    * 对象添加属性     对象名.属性名 = 数据
+    * */
+    test.name = "小红";
+    test.age = 12;
+    /*
+    * 对象添加功能（方法/函数）  对象名.函数名 = 函数
+    * */
+    test.sanBu = function () {
+        console.log("散步");
+    }
+
+    console.log(test);
+    console.log(test.name);
+    console.log(test.age);
+    test.sanBu();
+
+
+    // 自定义 Math对象
+    // var MathPi = new Object();
+    // MathPi.PI = 3.141592653;
+    // MathPi.myMath = function () {
+    //     var arr = arguments;
+    //     var max = arr[0];
+    //     var min = arr[0];
+    //     var sum = arr[0];
+    //     for (var i = 0; i < arr.length; i++) {
+    //         if (i > 0) {
+    //             max = max < arr[i] ? arr[i] : max;
+    //             min = min > arr[i] ? arr[i] : min;
+    //             sum += i;
+    //         }
+    //         for (var j = 0; j < arr.length; j++) {
+    //             if (arr[i] < arr[j]) {
+    //                 var curr = arr[i];
+    //                 arr[i] = arr[j];
+    //                 arr[j] = curr;
+    //             }
+    //         }
+    //     }
+    //     return {
+    //         arr:arr,
+    //         max:max,
+    //         min:min,
+    //         sum:sum
+    //     }
+    // }
+    //
+    // console.log(MathPi);
+    // console.log(MathPi.PI);
+    // console.log(MathPi.myMath(25,10,8,54,34,48,15));
+
+
+    var myMath = new Object();
+    myMath.PI = 3.141592653;
+    myMath.paiXu = function () {
+        var arr = arguments;
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = 0; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    var curr = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = curr;
+                }
+            }
+        }
+        return arr;
+    }
+    myMath.max = function(){
+        var arr = arguments;
+        var max = arr[0];
+        for (var i = 1; i < arr.length; i++) {
+            max = max < arr[i] ? arr[i] : max;
+        }
+        return max;
+    }
+    myMath.min = function(){
+        var arr = arguments;
+        var min = arr[0];
+        for (var i = 1; i < arr.length; i++) {
+            min = min > arr[i] ? arr[i] : min;
+        }
+        return min;
+    }
+    myMath.sum = function(){
+        var arr = arguments;
+        var sum = arr[0];
+        for (var i = 1; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    console.log("==========");
+    console.log(myMath);
+    console.log(myMath.PI);
+    console.log(myMath.paiXu(25,10,8,54,34,48,15));
+    console.log(myMath.max(25,10,8,54,34,48,15));
+    console.log(myMath.min(25,10,8,54,34,48,15));
+    console.log(myMath.sum(25,10,8,54,34,48,15));
+</script>
+</body>
+</html>

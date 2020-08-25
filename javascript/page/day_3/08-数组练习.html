@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    console.log("===============================");
+    var nums = [10, 80, 9, 11];
+    var max = nums[0];
+    var min = nums[0];
+    var sum = nums[0];
+    for (var x = 1; x < nums.length; x++) {
+        if (nums[x] > max) {
+            max = nums[x];
+        }
+        if (nums[x] < min) {
+            min = nums[x]
+        }
+        sum += nums[x];
+    }
+
+    //平均值
+    var svg = sum / nums.length;
+    console.log("最大值：" + max + "\n最小值：" + min + "\n和为：" + sum + "\n平均值：" + svg);
+
+
+    console.log("===============================");
+    var arr1 = [];
+    for (var i = 1; i <= 10; i++) {
+        arr1[arr1.length] = i;
+    }
+    console.log(arr1);
+
+
+    console.log("===============================");
+    var arr2 = [2, 0, 33, 7, 2, 83, 62, 5];
+    var arr2curr = [];
+    for (var i = 0; i < arr2.length; i++) {
+        if (arr2[i] >= 10) {
+            arr2curr[arr2curr.length] = arr2[i];
+        }
+    }
+    console.log(arr2curr);
+
+
+    console.log("===============================");
+    var arr3 = [2, 0, 33, 7, 2, 83, 0, 62, 5];
+    var curr = [];
+    for (var i = 0; i < arr3.length; i++) {
+        if (arr3[i] == 0) {
+            continue;
+        }
+        curr[curr.length] = arr3[i];
+    }
+    console.log(curr);
+
+
+
+    console.log("===============================");
+    //  2.3 数组去重
+    fun_1();
+
+    function fun_1() {
+        var currArr = [10, 20, 10, 30, 40, 50, 30];
+        //    方法1
+        var arr = [];
+        for (var i = 0; i < currArr.length; i++) {
+            for (var j = i + 1; j < currArr.length; j++) {
+                if (currArr[i] == currArr[j]) {
+                    currArr.splice(j, 1);
+                }
+            }
+        }
+        console.log(currArr);
+        //    方法2
+    }
+
+    console.log("===============================");
+    fun_2();
+
+    function fun_2() {
+        var arr = [1, 2, 3, 2, 1];
+        var len = arr.length; // 数组长度
+        for (var i = 0; i < len; i++) {
+            if (arr[i] != arr[len - (i + 1)]) {
+                console.log("该数组不是对称数组");
+                return;
+            }
+        }
+        console.log("该数组是对称数组");
+    }
+</script>
+</body>
+</html>

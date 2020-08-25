@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 数组：是一个容器，可以一次性存放多个任意数据类型的值
+    * 创建数组的方式：
+    *   1.字面量创建
+    *       var 数组名 = [元素1,元素2,元素3.....];
+    *   2.使用构造函数创建
+    *       var 数组名 = new Array(长度);
+    * 核心：
+    *   对数组的索引（角标，下标）
+    *   索引：数组中的每一个元素都有一个编号，这个编号叫做索引，是有序的，从0开始
+    *   长度：length每一个数组都有一个长度属性，返回的是这个数组的长度
+    *
+    * 取值
+    *   数组名[索引]
+    * 修改值
+    *   数组名[索引] = 数据
+    * 存值：在数组的最后添加元素
+    *   数组名[数组名.length] = 数据
+    * */
+    var arr1 = [1, 2, 3, 4, 5, 6];
+    console.log(arr1);
+    console.log(arr1.length);
+    console.log(arr1[2]);
+    arr1[2] = "新来的";
+    console.log(arr1);
+    arr1[arr1.length] = "abc";
+    console.log(arr1);
+
+</script>
+</body>
+</html>

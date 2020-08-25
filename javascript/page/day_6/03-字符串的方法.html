@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 字符串对象是一个伪数组，有索引有长度
+    * charAt(index)  返回对应索引的字符
+    * indexOf(item,index)  返回指定字符在字符串首次出现的位置  找不到返回-1
+    *   item  查找指定字符
+    *   index 从指定位置开始查找
+    * replace(oldStr,newStr)  将新值替换旧值   全局替换则需要写正则表达式
+    * slice(star,end)  截取指定字符串   包含star不包含end
+    * split(分隔符)   将字符串根据指定分隔符进行分割，转换为数组
+    *
+    * 字符串注意事项：
+    *   1.字符串是不可变得，是一个常量
+    * */
+    var str = "hello-World";
+
+    str[0] = "H";
+    console.log(str);
+
+    console.log(str.split("-"));
+
+    console.log(str.slice(4,7));
+
+    // console.log(str.replace(/o/g,"0"));
+
+    // console.log(str.indexOf("c"));
+    // console.log(str.indexOf("c",3));
+
+
+    // var str2 = new String("abc");
+    // console.log(str2);
+    // console.log(str2.length);
+    // console.log(str2[0]);
+    // console.log(str2.charAt(0));
+
+</script>
+</body>
+</html>

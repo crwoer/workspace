@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [10, 20, 10, 30, 40, 50, 30];
+    var newArr = [];
+    //flag用于判断当前这个数是否重复，true则默认是不重复
+    var flag;
+    //取出arr中的每一个元素
+    for(var i = 0 ;i<arr.length;i++){
+        //默认不重复
+        flag = true;
+        //取出新数组中的每一个元素
+        for(var j = 0;j<newArr.length;j++){
+            //拿arr中的元素和newArr中的元素进行比较
+            if(arr[i] === newArr[j]){
+                //代表重复了  ？
+                flag = false;
+                break;
+            }
+        }
+        //判断是否重复了？重复不存 ，没有重复则存到newArr中
+        if(flag){
+            newArr[newArr.length] = arr[i];
+        }
+    }
+    console.log(arr);
+    console.log(newArr);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*作用域
+    *   全局作用域：script标签或者js文件内    在全局作用域下创建的变量叫做全局变量
+    *   局部作用域（函数作用域）：在函数内部  在局部作用域下创建的变量叫做局部变量
+    *
+    * 作用域变量重名情况下的查找规则：作用域链
+    *   1.使用就近原则，函数内部优先使用局部变量
+    *   2.如果没找到则在上一层查找，直到查找到全局作用域
+    *   3.如果全局作用域都没有找到，则报错 not defined
+    * */
+    var num = 10;
+    function fn1() {
+        var num = 20;
+    }
+    console.log(num);
+</script>
+</body>
+</html>

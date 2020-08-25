@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 输入时间（未来时间）- 当前系统时间  =   倒计时
+    * */
+
+    var date = new Date();
+    var date1 = new Date("2020-8-25 14:20:30");
+    var currDate = date1.getTime() - date.getTime();
+    var day = parseInt(currDate / 1000 / (3600 * 24));
+    var hh = parseInt(currDate / 1000 / 3600 % 24);
+    hh = hh < 10 ? "0" + hh : hh;
+    var mm = parseInt(currDate / 1000 / 60 % 60);
+    mm = mm < 10 ? "0" + mm : mm;
+    var ss = parseInt(currDate / 1000 % 60);
+    ss = ss < 10 ? "0" + ss : ss;
+    console.log("剩余时间：" + day + "天 " + hh + ":" + mm + ":" + ss);
+
+
+    var time = +new Date("2020-8-25 14:20:30");
+    var nowDate = +new Date();
+    // 时间差  秒
+    var times = (time - nowDate) / 1000;
+    // 天
+    var day = parseInt(times / 3600 / 24);
+    // 时
+    var hh = parseInt(times / 3600 % 24);
+    hh = hh < 10 ? "0" + hh : hh;
+    // 分
+    var mm = parseInt(times / 60 % 60);
+    mm = mm < 10 ? "0" + mm : mm;
+    // 秒
+    var ss = parseInt(times % 60);
+    ss = ss < 10 ? "0" + ss : ss;
+
+    document.write("<h1>" + day + "天" + hh + ":" + mm + ":" + ss + "</h1>")
+</script>
+</body>
+</html>

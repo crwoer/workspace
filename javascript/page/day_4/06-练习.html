@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>1.猜数字小游戏</h4>
+<button onclick="test1()">猜数字</button>
+<br>
+<h4>2.生成随机rgb颜色</h4>
+<button onclick="test2()">随机颜色</button>
+<div style="width: 100px;height: 100px;border: 1px dashed #ccc;" id="div"></div>
+<script>
+    /*
+    * 练习：
+    *   1.猜数字小游戏
+    *       1.1 生成一个随机数
+    *       1.2 while循环  让用户输入一个数字
+    *       1.3 进行比较
+    *           >   输入的数太大
+    *           <   输入的数太小
+    *           =   猜对了！
+    *   2.生成一个随机rgb颜色  格式rgb(255,255,255);
+    *       2.1 生成三个随机数0-255  [0-255]
+    *       2.2 拼接为rgb格式
+    *
+    * */
+
+    function test1() {
+        var uNum;
+        var ranNum = Math.floor(Math.random() * 5 + 1);
+        while (true) {
+            uNum = +prompt("请输入0-5的一个数：");
+            if (uNum == ranNum) {
+                alert("恭喜你，猜对了！");
+                break;
+            } else if (uNum > ranNum) {
+                alert("输入的数太大了！");
+            } else if (uNum < ranNum) {
+                alert("输入的数太小了！");
+            }
+        }
+    }
+
+
+    function test2() {
+        var div = document.getElementById("div");
+        var bg = {
+            red: Math.floor(Math.random() * 255 + 1),
+            green: Math.floor(Math.random() * 255 + 1),
+            blue: Math.floor(Math.random() * 255 + 1)
+        }
+        div.style.backgroundColor = "rgb(" + bg.red + "," + bg.green + "," + bg.blue + ")";
+        console.log(bg);
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 函数：将一个特定的功能放在一个函数中，这个函数可以被重复调用，提高代码的复用性
+    * 第一格式：
+    *   function 函数名(形参1,形参2,,形参3....){
+    *       函数体;
+    *       return res;
+    *   }
+    *
+    *   调用函数：
+    *       直接调用：  函数名(实参1,实参2,,实参3....);
+    *       输出调用：  console.log(函数名([实参]));
+    *       赋值调用：  var 变量名 = 函数名([实参]);
+    *
+    * 形参注意事项：
+    *   1.形参是一个变量，不需要var
+    *   2.形参可以有默认值，如果形参没有设置默认值也没有实参传递，则是undefined
+    *   3.多个形参（多个实参）用逗号隔开
+    *
+    * 形参和实参对应关系：
+    *   形参的个数 = 实参的个数  输出正确的结果
+    *   实参的个数 < 形参的个数  接收实参的个数，没有值得形参则是undefined
+    *   实参的个数 > 形参的个数  接收形参的个数
+    *
+    * return 注意事项：
+    *   1.return是将结果返回给调用者  调用者：调用函数的当前行
+    *   2.return可以用于结束当前函数，原理是带着函数的结果返回给调用者
+    *   3.return只能返回单个值，返回多个用数组（或对象）
+    *   4.return后面不要写任何代码
+    *   5.函数的默认返回值是undefined，可以使用return改变函数的返回值
+    *
+    *   写函数之前想两个问题
+    *       有没有参数，有几个参数
+    *
+    * */
+
+    function getSum(num1=10, num2) {
+        console.log(num1 + num2);
+    }
+
+    getSum(20, 10);
+
+    function getSum2(num1, num2) {
+        var sum = 0;
+        for (var i = num1; i <= num2; i++) {
+            sum += i;
+        }
+        return sum;
+    }
+
+    console.log(getSum2(1, 100));
+</script>
+</body>
+</html>

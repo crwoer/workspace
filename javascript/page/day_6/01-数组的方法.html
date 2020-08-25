@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*数组的一些方法
+        不会改变原来的数组：
+    *   concat(arr)   方法用于连接两个或多个数组，返回新的数组
+    *       arrObj.concat()    /    [].concat.concat()
+    *   join("分隔符")   可选，使用指定分隔符将数组中的每一个元素分隔后返回字符串，默认分隔符是逗号
+    *   slice(star,end)     从某个已有的数组返回选定的元素(范围)，包含star不包含end，返回新数组
+    *   includes(ele)   判断指定的元素在指定数组中是否存在，存在true  不存在false
+    *   indexOf(ele,index)   查找指定元素在指定数组中的索引值，找不到返回-1
+    *       ele     被查找的元素
+    *       index   从指定索引位置开始查找
+    *
+    *   会改变原来的数组：
+    *   pop()    删除数组中最后一个元素并且返回被删除的元素
+    *   push(ele1,ele2,ele3....)   至少添加一个元素，向数组末尾添加一个或多个元素，并返回新的长度
+    *   shift()     删除并返回数组中的第一个元素
+    *   unshift(ele1,ele2,ele3....)   向数组的开头添加一个或多个元素，并返回新的长度
+    *   reverse()   颠倒数组中元素的顺序,返回反转后的数组
+    *   sort([排序函数])    如果没有排序函数则默认先比较元素第一个字符，第一个字符比较不了则比较第二个字符
+    *       排序函数：  function(a,b){return a - b };  其中a-b表示从小到大，b-a从大到小
+    *   splice(index,howmany,ele)   向/从数组中添加/删除项目，然后返回被删除的项目
+    *       index  索引  从指定索引删除或者添加
+    *       howmany  删除的个数
+    *       ele    添加的元素
+    *       返回被删除的元素，以数组的格式
+    * */
+    var arr1 = [1, 2, 3];
+    var arr2 = [4, 5, 6];
+    console.log(arr1.concat(arr2));
+    console.log([].concat(arr1, arr2));
+    console.log(arr1.join(""));
+    console.log(arr1);
+    console.log(arr1.pop());
+    console.log(arr1.push(7, 8, 9));
+    ;
+    console.log(arr1);
+
+
+    console.log(arr2);
+    console.log(arr2.shift());
+    console.log(arr2.unshift(1, 2, 3));
+    console.log(arr2);
+
+    console.log("=========");
+    var arr3 = [1, 2, 3, 4, 5, 6];
+    console.log(arr3);
+    console.log(arr3.reverse());
+    console.log(arr3);
+
+    console.log("=========");
+    var arr4 = ["a", "b", "c", "d", "e"];
+    console.log(arr4);
+    console.log(arr4.slice(1, 4));
+    console.log(arr4);
+
+    console.log("=========");
+    var arr5 = [10,5,40,25,1000,1];
+    console.log(arr5);
+    console.log(arr5.sort(function (a, b) {
+        return a - b;  // 从小到大
+        return b - a;  // 从大到小
+    }));
+    console.log(arr5);
+
+
+    console.log("=========");
+    var arr6 = ["a", "b", "c", "d", "a","e"];
+
+
+    console.log(arr6.includes("a"));
+    console.log(arr6.includes("i"));
+    console.log(arr6.indexOf("a"));
+    console.log(arr6.indexOf("a",1));
+    console.log(arr6.indexOf("i"));
+
+    console.log("=========");
+    console.log(arr6.splice(arr6.length-1)); // 后删除
+    console.log(arr6.splice(arr6.length,0,"f","g")); //  后添加
+    console.log(arr6.splice(0, 1));  // 前删除
+    console.log(arr6.splice(0, 0, 1));  // 前添加
+
+
+
+
+
+</script>
+</body>
+</html>
